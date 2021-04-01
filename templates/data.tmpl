@@ -1,0 +1,22 @@
+{{define "data"}}
+<div class="container">
+    <table class="table">
+        <thead>
+        <tr>
+            {{- range $entry := .Meta }}
+            <th scope="col">{{ $entry }}</th>
+            {{- end }}
+        </tr>
+        </thead>
+        <tbody>
+        {{- range $row := .Data }}
+        <tr>
+            {{- range $entry := $row }}
+            <td>{{ $entry }}</td>
+            {{- end }}
+        </tr>
+        {{- end }}
+        </tbody>
+    </table>
+</div>
+{{end}}
